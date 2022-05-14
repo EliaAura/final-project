@@ -1,0 +1,75 @@
+
+.contacts {
+    padding-top: 160px;
+}
+h5 {
+    font-family: 'El Messiri', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-bottom: 1px solid #0188be;
+    font-size: 20px;
+    line-height: 1.4em;
+}
+.contacts h2 {
+    margin-bottom: 50px;
+}
+
+.contacts__about {
+    font-size: 20px;
+    line-height: 1.4em;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.contacts-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.contacts-info__block {
+    max-width: 450px;
+}
+.contacts-info__title {
+    margin-bottom: 30px;
+}
+.contacts-info__list {
+    font-size: 16px;
+    line-height: 2;
+    margin-bottom: 50px;
+    list-style: disc;
+    margin-left: 20px;
+
+}
+
+form.contacts-info__block {
+    padding: 20px;
+    background-color: #93cae0;
+    border-radius: 10px;
+}
+
+form.contacts-info__block input, textarea {
+    margin-bottom: 40px;
+    width: 100%;
+    height: max-content;
+    padding: 5px 10px;
+    line-height: 2;
+
+}
+
+form.contacts-info__block input.contacts-btn {
+    margin-bottom: 0;
+    font-size: 1em;
+    padding: 1em 2em;
+    background-color: #018ABE;
+    color: #ffffff;
+    border-radius: 4px;
+    transition: all ease-in 0.3s;
+}
+.contacts-btn:active {
+    transform: scaleX(-1);
+}
+.contacts-btn:hover {
+    text-shadow: 1px 1px 2px white;
+    box-shadow: 2px 2px 5px #032938;
+}

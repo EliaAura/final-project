@@ -1,0 +1,107 @@
+.reviews {
+    padding-top: 160px;
+}
+
+.reviews h2 {
+    margin-bottom: 50px;
+}
+.reviews-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+
+.review__item {
+    max-width: 400px;
+    height: 200px;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #ffffff;
+    background-color: #018ABE;
+    overflow: auto;
+    transition: all 0.3s ease-out;
+}
+
+.review__item::-webkit-scrollbar {
+    width: 0;
+}
+
+.review-person-name {
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.review__item:hover {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.review-account {
+    display: flex;
+    gap: 50px;
+}
+.review-send {
+    padding: 30px 20px 20px;
+    background-color: #93cae0;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 500px;
+    width: 40%;
+}
+
+.review-send input, textarea {
+    height: max-content;
+    padding: 5px 10px;
+    line-height: 2;
+    
+}
+
+input.check-in-btn {
+    font-size: 1em;
+    padding: 1em 2em;
+    background-color: #018ABE;
+    color: #ffffff;
+    border-radius: 4px;
+    transition: all ease-in 0.3s;
+}
+
+/* .review-btn:active {
+    transform: scaleX(-1);
+}
+
+.review-btn:hover {
+    text-shadow: 1px 1px 2px white;
+    box-shadow: 2px 2px 5px #032938;
+} */
+
+.rating {
+    display: inline-flex;
+    font-size: 50px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: .2s;
+    flex-direction: row-reverse;
+}
+.rating__item {
+    width: 60px;
+    height: 60px;
+}
+
+.rating__item:hover,
+.rating__item:hover ~ .rating__item {
+    color: #018ABE;
+}
+
+.rating[data-total-value="1"] .rating__item:nth-child(n+5),
+.rating[data-total-value="2"] .rating__item:nth-child(n+4),
+.rating[data-total-value="3"] .rating__item:nth-child(n+3),
+.rating[data-total-value="4"] .rating__item:nth-child(n+2),
+.rating[data-total-value="5"] .rating__item:nth-child(n+1) {
+    color: #018ABE;
+}
