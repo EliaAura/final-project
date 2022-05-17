@@ -81,11 +81,12 @@
                 </div>
                 <h2>Оставьте ваш отзыв</h2>
                 <div class="review-account">
-                    <form action="mailto:ritmstyle@gmail.net" class="review-send">
+                    <form class="review-send" method="post">
                         <input type="text" name="name" placeholder="Имя">
                         <input type="text" name="surname" placeholder="Фамилия">
                         <input type="email" name="email" placeholder="Email">
-                        <textarea name="review" cols="30" rows="10" placeholder="Ваш отзыв"></textarea>
+                        <textarea name="review" cols="30" rows="6" placeholder="Ваш отзыв"></textarea>
+                        <div id="error" style="color: red"></div>
                         <input type="submit" class="check-in-btn">
                     </form>
                     <div class="rating" data-total-value="0">
@@ -120,7 +121,6 @@
         <div class="container">
             <div class="footer-wrapper">
                 <p class="copyright">© 2018-2022 RitmStyle</p>
-                <div class="social-icons"></div>
             </div>
         </div>
     </footer>

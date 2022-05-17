@@ -6,7 +6,7 @@
   appearance: none;
   background-color: #018ABE;
   color: #ffffff;
-  border-radius: 4px;
+  border-radius: 20px 0px 20px 0px;
   border: none;
   position: relative;
   transition: transform ease-in 0.1s, box-shadow ease-in 0.2s;
@@ -96,5 +96,19 @@
  100% {
     background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
   background-size: 0% 0%, 0% 0%,  0% 0%,  0% 0%,  0% 0%,  0% 0%;
+  }
+}
+
+
+@media (max-width: 1023px) {
+  .check-in-btn {
+    font-size: 14px;
+    padding: 1em 1.5em;
+  }
+}
+
+@media (max-width: 767px) {
+  .check-in-btn {
+    background-color: #0188be00;
   }
 }

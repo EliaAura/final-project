@@ -24,11 +24,17 @@ h5 {
 .contacts-wrapper {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
     gap: 30px;
 }
 .contacts-info__block {
     max-width: 450px;
+}
+
+.contacts-info__block:last-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 600px;
 }
 .contacts-info__title {
     margin-bottom: 30px;
@@ -57,19 +63,41 @@ form.contacts-info__block input, textarea {
 
 }
 
-form.contacts-info__block input.contacts-btn {
-    margin-bottom: 0;
+#error {
+    height: 10px;
+    margin-bottom: 20px;
+}
+
+.contacts input.check-in-btn {
     font-size: 1em;
-    padding: 1em 2em;
+    padding: 1em 2em !important;
+    margin-bottom: 0;
     background-color: #018ABE;
     color: #ffffff;
     border-radius: 4px;
     transition: all ease-in 0.3s;
 }
-.contacts-btn:active {
-    transform: scaleX(-1);
+
+@media (max-width: 989px) {
+    .contacts-info__block {
+        max-width: 380px;
+    }
 }
-.contacts-btn:hover {
-    text-shadow: 1px 1px 2px white;
-    box-shadow: 2px 2px 5px #032938;
+
+@media (max-width: 767px) {
+    .contacts {
+        padding-top: 120px;
+    }
+    h5 {
+        font-size: 18px;
+    }
+    .contacts h2 {
+        margin-bottom: 30px;
+    }
+    
+    .contacts__about {
+        font-size: 16px;
+        margin-bottom: 50px;
+    }
 }
+

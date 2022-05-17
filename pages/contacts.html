@@ -63,13 +63,14 @@
                         <h5 class="contacts-info__title">Наш адрес</h5>
                         <p class="contacts-info__address"><a href="../index.html#map">бассейн "Сатурн", ул.Гагарина 12а, г.Вилейка, Минская обл.</a></p>
                     </div>
-                    <form class="contacts-info__block" method="post" enctype="text/plain" action="mailto:ritmstyle@gmail.net">
+                    <form id="contacts-form" class="contacts-info__block" method="post">
                         <h5 class="contacts-info__title">Мы готовы ответить на ваши вопросы и предложения</h5>
                         <input type="text" name="name" placeholder="Имя">
                         <input type="email" name="mail" placeholder="Email">
                         <input type="tel" name="phone" placeholder="Телефон">
-                        <textarea name="message" rows="8" placeholder="Ваше сообщение"></textarea>
-                        <input type="submit" class="contacts-btn" value="Отправить">
+                        <textarea name="message" rows="6" placeholder="Ваше сообщение"></textarea>
+                        <div id="error" style="color: red"></div>
+                        <input type="submit" class="check-in-btn">
                     </form>
                 </div>
             </div>
@@ -96,11 +97,11 @@
         <div class="container">
             <div class="footer-wrapper">
                 <p class="copyright">© 2018-2022 RitmStyle</p>
-                <div class="social-icons"></div>
             </div>
         </div>
     </footer>
     <script type="text/javascript" src=".././js/buttons.js"></script> 
+    <script src="../js/contacts.js"></script>
     <script src="../js/main.js"></script>
    
 </body>

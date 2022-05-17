@@ -126,10 +126,12 @@
                     <div id="map" class="contacts-map"></div>
                     <div class="contact-info">
                         <p class="address-name">Бассейн "Сатурн"</p>
-                        <p class="street-address">ул.Гагарина 12а</p>
-                        <p class="city-name">г.Вилейка</p>
-                        <p class="contact-phone">+375(29)2345678</p>
-                        <div class="appoint-record">Запись по договоренности</div>
+                        <div class="contact-adress__wrapper">
+                            <p class="street-address">ул.Гагарина 12а</p>
+                            <p class="city-name">г.Вилейка</p>
+                            <p class="contact-phone">+375(29)2345678</p>
+                            <div class="appoint-record">Запись по договоренности</div>
+                        </div>
                         <a href="#" class="check-in-btn">Записаться на сеанс</a>
                     </div>
                 </div>
@@ -156,14 +158,21 @@
         <div class="container">
             <div class="footer-wrapper">
                 <p class="copyright">© 2018-2022 RitmStyle</p>
-                <div class="social-icons"></div>
             </div>
         </div>
     </footer>
     <script type="text/javascript" src="./js/buttons.js"></script>
     <script src="http://api-maps.yandex.ru/2.1/?apikey=9589bef2-8a43-4106-8e9b-fd3ca3f9e50f&lang=ru_RU"></script>
-    <script src="./js/api.js"></script>
     <script src="./js/main.js"></script>
+    <script>
+        function init() {
+            let map = new ymaps.Map('map', {
+                center: [54.4814051,26.8895657],
+                zoom: 16
+            });
+        }
+        ymaps.ready(init);
+    </script>
 </body>
 
 </html>
