@@ -1,6 +1,7 @@
 .check-in-btn {
   display: inline-block;
   font-size: 1em;
+  font-weight: 700;
   padding: 1em 2em;
   -webkit-appearance: none;
   appearance: none;

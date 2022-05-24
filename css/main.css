@@ -498,17 +498,20 @@ h2:after {
 .footer-wrapper {
     background-color: #ffffff;
     color: #0f2631;
+    font-size: 12px;
     padding: 30px 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.copyright {
-    font-size: 14px;
+.footer-wrapper .logo {
+    background-color: #0188be;
+    border-radius: 5px;
+    width: 40px;
+    height: 40px;
+    padding: 5px;
 }
-.social-icons {
 
-}
 
 /*..................................*/
 /* body._touch .nav ul li {
@@ -671,6 +674,12 @@ h2:after {
     border: none;
     transition: transform ease-in 0.1s, box-shadow ease-in 0.2s;
 }
+#pop-up-error {
+    height: 20px;
+    margin-bottom: 20px;
+    color: rgb(187, 3, 3);
+}
+
 .pop-up__close {
     position: absolute;
     top: 20px;
@@ -1025,6 +1034,7 @@ h2:after {
 		-1px  1px 1px #0188BE,
 		 1px  1px 1px #0188BE;
     }
+    
     h2::before,
     h2::after,
     .home-subtitle::before,
