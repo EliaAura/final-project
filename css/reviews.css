@@ -28,17 +28,10 @@
 .review__item::-webkit-scrollbar {
     width: 0;
 }
-
-.review-person-name {
-    font-size: 18px;
-    margin-bottom: 20px;
-    font-weight: bold;
-}
-
 .review__item:hover {
-    -webkit-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    transform: scale(1.2);
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
 }
 
 .review-account {
@@ -60,6 +53,7 @@
     height: max-content;
     padding: 5px 10px;
     line-height: 2;
+    border-radius: 5px;
     
 }
 #error {

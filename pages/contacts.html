@@ -9,9 +9,10 @@
     <link rel="stylesheet" href="../fonts/ProximaNova/stylesheet.css">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/buttons.css">
     <link rel="stylesheet" href="../css/waves.css">
     <link rel="stylesheet" href="../css/contacts.css">
+    <link rel="stylesheet" href="../css/buttons.css">
+
 </head>
 <body>
     <header class="header">
@@ -29,7 +30,7 @@
                         <li><a href="../pages/about.html">О нас</a></li>
                     </ul>
                 </nav>
-                <a href="#" class="check-in-btn">Записаться на сеанс</a>
+                <a href="#" id="pop-up__btn" class="check-in-btn">Записаться на сеанс</a>
             </div>
         </div>
     </header>
@@ -93,6 +94,31 @@
     </svg>
     </div>
     <!--Waves end-->
+    <!-- pop up -->
+    <div class="pop-up">
+        <div class="pop-up__container">
+            <div class="pop-up__body">
+                <h3 class="pop-up__title">Оставьте заявку</h3>
+                <form method="post">
+                    <input type="text" placeholder="Имя">
+                    <input type="tel" placeholder="Телефон">
+                    <select name="select">
+                        <option disabled>Выберите сеанс</option>
+                        <option>Стандартный RitmStyle</option>
+                        <option>RitmStyle для пар</option>
+                        <option>RitmStyle с полным погружением под воду</option>
+                        <option>RitmStyle для беременных</option>
+                        <option>RitmStyle + подводная фотосессия</option>
+                    </select>
+                    <input type="date">
+                    <input type="time">
+                    <input type="submit" class="check-in-btn">
+                </form>
+                <div class="pop-up__close">&#10006;</div>
+            </div>
+        </div>
+    </div>
+    <!-- pop up end -->
     <footer class="footer">
         <div class="container">
             <div class="footer-wrapper">
@@ -100,9 +126,9 @@
             </div>
         </div>
     </footer>
-    <script type="text/javascript" src=".././js/buttons.js"></script> 
     <script src="../js/contacts.js"></script>
     <script src="../js/main.js"></script>
+    <script type="text/javascript" src=".././js/buttons.js"></script> 
    
 </body>
 </html>

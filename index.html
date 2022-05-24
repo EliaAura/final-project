@@ -28,7 +28,7 @@
                         <li><a href="./pages/about.html">О нас</a></li>
                     </ul>
                 </nav>
-                <a href="#" class="check-in-btn">Записаться на сеанс</a>
+                <a href="#" id="pop-up__btn" class="check-in-btn">Записаться на сеанс</a>
             </div>
         </div>
     </header>
@@ -48,7 +48,7 @@
                 <h2 class="sessions-title"><a href="./pages/sessions.html">Сеансы RitmStyle</a></h2>
                 <div class="sessions-block">
                     <p class="sessions-block__item"><a href="./pages/sessions.html#standard-session" class="anchor">Стандартный RitmStyle</a>
-                        <img src="./img/standard.jpg" alt="standard">
+                        <img src="./img/standard.jpeg" alt="standard">
                     </p>
                     <p class="sessions-block__item"><a href="./pages/sessions.html#couple-session" class="anchor">RitmStyle для пар</a>
                     <img src="./img/couple_small.jpg" alt="couple">
@@ -69,15 +69,42 @@
             <div class="container container-wide">
                 <h2 class="reviews-title"><a href="./pages/reviews.html">Отзывы</a></h2>
                 <div class="slider">
-                    <div class="review-slider__item"></div>
-                    <div class="review-slider__item"></div>
-                    <div class="review-slider__item"></div>
+                    <div class="review-slide">
+                        <p class="review-person-name">Анна Волынец</p>
+                        <p class="review-text"><q>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda nisi pariatur, doloremque sequi, ex tempora eum perspiciatis harum inventore quas maiores deserunt earum nostrum unde possimus suscipit quaerat ea expedita?</q></p>
+                    </div>
+                    <div class="review-slide">
+                        <p class="review-person-name">Андрей Иванов</p>
+                        <p class="review-text"><q>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda nisi pariatur, doloremque sequi, ex tempora eum perspiciatis harum inventore quas maiores deserunt earum nostrum unde possimus suscipit quaerat ea expedita?</q></p>
+                    </div>
+                    <div class="review-slide">
+                        <p class="review-person-name">Ольга Костевич</p>
+                        <p class="review-text"><q>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda nisi pariatur, doloremque sequi, ex tempora eum perspiciatis harum inventore quas maiores deserunt earum nostrum unde possimus suscipit quaerat ea expedita?</q></p>
+                    </div>
+                    <div class="review-slide">
+                        <p class="review-person-name">Светлана Соболевская</p>
+                        <p class="review-text"><q>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda nisi pariatur, doloremque sequi, ex tempora eum perspiciatis harum inventore quas maiores deserunt earum nostrum unde possimus suscipit quaerat ea expedita?</q></p>
+                    </div>
+                    <div class="review-slide">
+                        <p class="review-person-name">Юрий Беганский</p>
+                        <p class="review-text"><q>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda nisi pariatur, doloremque sequi, ex tempora eum perspiciatis harum inventore quas maiores deserunt earum nostrum unde possimus suscipit quaerat ea expedita? Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda nisi pariatur, doloremque sequi, ex tempora eum perspiciatis harum inventore quas maiores deserunt earum nostrum unde possimus suscipit quaerat ea expedita?</q></p>
+                    </div>
+                    <div class="review-slide">
+                        <p class="review-person-name">Инна Кравцова</p>
+                        <p class="review-text"><q>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda nisi pariatur, doloremque sequi, ex tempora eum perspiciatis harum inventore quas maiores deserunt earum nostrum unde possimus suscipit quaerat ea expedita?</q></p>
+                    </div>
+                    <div class="review-slide">
+                        <p class="review-person-name">Иван Разумович</p>
+                        <p class="review-text"><q>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda nisi pariatur, doloremque sequi, ex tempora eum perspiciatis harum inventore quas maiores deserunt earum nostrum unde possimus suscipit quaerat ea expedita?</q></p>
+                    </div>
+                    <div class="review-slide">
+                        <p class="review-person-name">Кирилл Светлов</p>
+                        <p class="review-text"><q>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda nisi pariatur, doloremque sequi, ex tempora eum perspiciatis harum inventore quas maiores deserunt earum nostrum unde possimus suscipit quaerat ea expedita?</q></p>
+                    </div>
                 </div>
                 <div class="slider-dots">
-                    <div class="slider-dot"></div>
-                    <div class="slider-dot"></div>
-                    <div class="slider-dot"></div>
-                    <div class="slider-dot"></div>
+                    <div class="slider-dot" data-dir="prev"></div>
+                    <div class="slider-dot" data-dir="next"></div>
                 </div>
             </div>
         </section>
@@ -154,6 +181,31 @@
     </svg>
     </div>
     <!--Waves end-->
+    <!-- pop up -->
+    <div class="pop-up">
+        <div class="pop-up__container">
+            <div class="pop-up__body">
+                <h3 class="pop-up__title">Оставьте заявку</h3>
+                <form method="post">
+                    <input type="text" placeholder="Имя">
+                    <input type="tel" placeholder="Телефон">
+                    <select name="select">
+                        <option selected>Выберите сеанс</option>
+                        <option>Стандартный RitmStyle</option>
+                        <option>RitmStyle для пар</option>
+                        <option>RitmStyle с полным погружением под воду</option>
+                        <option>RitmStyle для беременных</option>
+                        <option>RitmStyle + подводная фотосессия</option>
+                    </select>
+                    <input type="date">
+                    <input type="time">
+                    <input type="submit" class="check-in-btn">
+                </form>
+                <div class="pop-up__close">&#10006;</div>
+            </div>
+        </div>
+    </div>
+    <!-- pop up end -->
     <footer class="footer">
         <div class="container">
             <div class="footer-wrapper">
@@ -161,7 +213,8 @@
             </div>
         </div>
     </footer>
-    <script type="text/javascript" src="./js/buttons.js"></script>
+
+    <script src="./js/slider.js"></script>
     <script src="http://api-maps.yandex.ru/2.1/?apikey=9589bef2-8a43-4106-8e9b-fd3ca3f9e50f&lang=ru_RU"></script>
     <script src="./js/main.js"></script>
     <script>
@@ -173,6 +226,7 @@
         }
         ymaps.ready(init);
     </script>
+    <script type="text/javascript" src="./js/buttons.js"></script>
 </body>
 
 </html>

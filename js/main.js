@@ -51,3 +51,18 @@ if(menuBurger) {
 
 
 
+const openPopUp = document.getElementById('pop-up__btn');
+const closePopUp = document.querySelector('.pop-up__close');
+const popUp = document.querySelector('.pop-up');
+
+openPopUp.addEventListener('click', function(e) {
+    e.preventDefault();
+
+    popUp.classList.add('active');
+
+})
+
+closePopUp.addEventListener('click', () => {
+    popUp.classList.remove('active');
+}
+)

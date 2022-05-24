@@ -12,6 +12,7 @@ h5 {
 }
 .contacts h2 {
     margin-bottom: 50px;
+    line-height: 1.2em;
 }
 
 .contacts__about {
@@ -34,10 +35,11 @@ h5 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 600px;
+    gap: 30px;
+    max-height: 600px;
 }
 .contacts-info__title {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 .contacts-info__list {
     font-size: 16px;
@@ -55,17 +57,16 @@ form.contacts-info__block {
 }
 
 form.contacts-info__block input, textarea {
-    margin-bottom: 40px;
     width: 100%;
     height: max-content;
     padding: 5px 10px;
     line-height: 2;
+    border-radius: 5px;
 
 }
 
 #error {
-    height: 10px;
-    margin-bottom: 20px;
+    height: 20px;
 }
 
 .contacts input.check-in-btn {
@@ -99,5 +100,27 @@ form.contacts-info__block input, textarea {
         font-size: 16px;
         margin-bottom: 50px;
     }
+    .contacts-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    .contacts-info__block {
+        max-width: 500px;
+    }
+    .contacts-info__list {
+        font-size: 14px;
+        line-height: 1.4;
+        margin-bottom: 30px;
+        
+    }
 }
 
+@media (max-width: 424px) {
+    form.contacts-info__block {
+        padding: 20px 10px;
+        border-radius: 0px;
+    }
+    h5 {
+        font-size: 16px;
+    }
+}

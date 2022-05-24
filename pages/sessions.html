@@ -29,7 +29,7 @@
                         <li><a href="../pages/about.html">О нас</a></li>
                     </ul>
                 </nav>
-                <a href="#" class="check-in-btn">Записаться на сеанс</a>
+                <a href="#" id="pop-up__btn" class="check-in-btn">Записаться на сеанс</a>
             </div>
         </div>
     </header>
@@ -59,7 +59,7 @@
                     </div>
                     <div id="diving-session" class="sessions__item">
                         <div class="session-content">
-                            <h3>RitmStyle с полным погружением под воду</h3>
+                            <h3>RitmStyle <br>с полным погружением под воду</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis omnis quidem neque veniam, officiis placeat quod quisquam, libero, autem explicabo corporis cum. Ab unde quisquam et minus expedita non blanditiis!</p>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum nesciunt tenetur commodi alias magnam, nostrum, itaque mollitia recusandae illo quod, facilis eaque architecto placeat accusantium assumenda. Accusantium ipsum sunt aliquam!</p>
                             <p>50руб</p>
@@ -77,7 +77,7 @@
                     </div>
                     <div id="photo-session" class="sessions__item">
                         <div class="session-content">
-                            <h3>RitmStyle + красочная подводная фотосессия</h3>
+                            <h3>RitmStyle + <br> красочная подводная фотосессия</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis omnis suscipit cum ab sequi possimus autem, necessitatibus deleniti eveniet asperiores magnam repellat dignissimos aliquid maiores voluptatem officiis molestiae libero rem.</p>
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam repellat, dignissimos esse hic nesciunt fuga at similique possimus beatae consectetur distinctio qui ut dicta voluptas cupiditate molestiae? Accusamus, dolorum cum.</p>
                             <p>250руб</p>
@@ -105,6 +105,31 @@
     </svg>
     </div>
     <!--Waves end-->
+    <!-- pop up -->
+    <div class="pop-up">
+        <div class="pop-up__container">
+            <div class="pop-up__body">
+                <h3 class="pop-up__title">Оставьте заявку</h3>
+                <form method="post">
+                    <input type="text" placeholder="Имя">
+                    <input type="tel" placeholder="Телефон">
+                    <select name="select">
+                        <option disabled>Выберите сеанс</option>
+                        <option>Стандартный RitmStyle</option>
+                        <option>RitmStyle для пар</option>
+                        <option>RitmStyle с полным погружением под воду</option>
+                        <option>RitmStyle для беременных</option>
+                        <option>RitmStyle + подводная фотосессия</option>
+                    </select>
+                    <input type="date">
+                    <input type="time">
+                    <input type="submit" class="check-in-btn">
+                </form>
+                <div class="pop-up__close">&#10006;</div>
+            </div>
+        </div>
+    </div>
+    <!-- pop up end -->
     <footer class="footer">
         <div class="container">
             <div class="footer-wrapper">
