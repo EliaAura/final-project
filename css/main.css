@@ -398,28 +398,49 @@ h2:after {
     border-bottom: 1px solid #0188be;
 
 }
-.costs-sertificate {
+.gift-sertificate {
     max-width: 526px;
-
 }
 .sertificate-img {
     height: auto;
     margin-bottom: 30px;
     border-radius: 10px;
 }
-.costs-sertificate__name {
+.gift-sertificate__name {
     font-weight: bold;
     font-size: 21px;
     text-align: center;
-
-}
-.costs-sertificate__name a {
-    transition: all 0.5s ease-in-out;
-
-}
-.costs-sertificate__name a:hover {
     text-shadow: 5px 5px 10px #0188be;
+    cursor: pointer;
+    position: relative;
+    transition: all .3s ease;
 }
+
+.gift-sertificate__name::before {
+    content: attr(data-clue);
+    position: absolute;
+    width: 120px;
+    height: 60px;
+    padding: 10px;
+    font-family: 'Proxima Nova', sans-serif;
+    font-size: 16px;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid #ffffff;
+    background-color: #0188be;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    visibility: hidden;
+    opacity: 0;
+    transition: all .3s ease;
+}
+.gift-sertificate__name:hover::before {
+    visibility: visible;
+    opacity: 1;
+}
+
 .contacts {
     padding-top: 50px;
     margin-bottom: 50px;
@@ -677,6 +698,9 @@ h2:after {
 #pop-up-error {
     height: 20px;
     margin-bottom: 20px;
+    color: transparent;
+}
+#pop-up-error.active {
     color: rgb(187, 3, 3);
 }
 

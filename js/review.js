@@ -1,3 +1,4 @@
+//------------rating stars -------------
 const ratingItemsList = document.querySelectorAll('.rating__item');
 const ratingItemsArray = Array.prototype.slice.call(ratingItemsList);
 
@@ -10,8 +11,33 @@ ratingItemsArray.forEach(item =>
     })
     )
 
+//--------review array -----------
 
+const wrapperRev = document.querySelector('.reviews-wrapper');
+
+function completeReviews() {
+    const reviewItems = document.querySelectorAll('.review__item');
+    let reviews = [];
+
+    for(let i=0; i < reviewItems.length; i++) {
+        
+        const reviewItem = {
+            person: reviewItems[i].firstElementChild.innerHTML,
+            review: reviewItems[i].lastElementChild.innerHTML
+        };
+        reviewItems[i].setAttribute('id', i);
+
+        reviews.push(reviewItem);
+        localStorage.setItem('id'+i, JSON.stringify(reviewItem));
+        console.log(JSON.parse(localStorage.getItem('id'+i)));
+    }
+}
+
+completeReviews();
+
+//-----------review form ----------
 const form = document.querySelector('.review-send');
+const error = document.getElementById('error')
 
 function getFormValue(e) {
     e.preventDefault();
@@ -38,13 +64,32 @@ function getFormValue(e) {
     fail = "Ваше сообщение слишком короткое";
     };
     if (fail!="") {
-    document.getElementById('error').innerHTML = fail;
-    return false;
+        error.classList.add('active');
+        error.innerHTML = fail;
+        return false;
     } else {
-    alert("Спасибо за отзыв!");
-    console.log(values);
-    form.reset();
+        const newRev = document.createElement('div');
+        newRev.classList.add('review__item');
+        wrapperRev.appendChild(newRev);
+        
+        const newPers = document.createElement('p');
+        newPers.classList.add('review-person-name');
+        newPers.innerHTML = `${name.value}` + ` ` + `${surname.value}`;
+
+        const newRevText = document.createElement('p');
+        newRevText.classList.add('review-text');
+        newRevText.innerHTML = `<q>${review.value}</q>`;
+        
+        newRev.appendChild(newPers);
+        newRev.appendChild(newRevText);
+        
+        completeReviews();
+
+        form.reset();
+        error.classList.remove('active');
+        return true;
     }
+
 }
 
 form.addEventListener('submit',getFormValue);

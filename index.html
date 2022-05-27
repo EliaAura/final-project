@@ -140,9 +140,9 @@
                         <li><a href="./pages/sessions.html#pregnant-session">RitmStyle для беременных <span>100руб</span></a></li>
                         <li><a href="./pages/sessions.html#photo-session">RitmStyle + фотосессия <span>250руб</span></a></li>
                     </ul>
-                    <div class="costs-sertificate">
+                    <div class="gift-sertificate">
                         <img src="./img/sertificate.jpg" alt="sertificate" class="sertificate-img">
-                        <h6 class="costs-sertificate__name"><a href="#">Подарочный сертификат</a></h6>
+                        <h6 class="gift-sertificate__name" data-clue="Стоимость 100руб">Подарочный сертификат</h6>
                     </div>
                 </div>
             </div>
@@ -156,10 +156,10 @@
                         <div class="contact-adress__wrapper">
                             <p class="street-address">ул.Гагарина 12а</p>
                             <p class="city-name">г.Вилейка</p>
-                            <p class="contact-phone">+375(29)2345678</p>
+                            <p class="contact-phone"><a href="tel:+375292345678">+375(29)2345678</a></p>
                             <div class="appoint-record">Запись по договоренности</div>
                         </div>
-                        <a href="#" class="check-in-btn">Записаться на сеанс</a>
+                        <a href="#" id="pop-up__button" class="check-in-btn">Записаться на сеанс</a>
                     </div>
                 </div>
             </div>
@@ -190,12 +190,14 @@
                     <input type="text" name="name" placeholder="Имя">
                     <input type="tel" name="phone" placeholder="Телефон">
                     <select name="select">
-                        <option selected disabled>Выберите сеанс</option>
+                        <option selected disabled>Выберите из списка</option>
                         <option>Стандартный RitmStyle</option>
                         <option>RitmStyle для пар</option>
                         <option>RitmStyle с полным погружением под воду</option>
                         <option>RitmStyle для беременных</option>
                         <option>RitmStyle + подводная фотосессия</option>
+                        <option>Абонемент на RitmStyle</option>
+                        <option>Подарочный сертификат</option>
                     </select>
                     <input type="date" name="date">
                     <input type="time" name="time">
@@ -219,6 +221,7 @@
 
     <script src="./js/slider.js"></script>
     <script src="http://api-maps.yandex.ru/2.1/?apikey=9589bef2-8a43-4106-8e9b-fd3ca3f9e50f&lang=ru_RU"></script>
+    <script src="./js/popup.js"></script>
     <script src="./js/main.js"></script>
     <script>
         function init() {

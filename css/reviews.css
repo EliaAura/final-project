@@ -29,9 +29,9 @@
     width: 0;
 }
 .review__item:hover {
-    -webkit-transform: scale(1.05);
-    -ms-transform: scale(1.05);
-    transform: scale(1.05);
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 .review-account {
@@ -58,7 +58,13 @@
 }
 #error {
     height: 20px;
+    color: transparent;
 }
+
+#error.active {
+    color: #ff0000;
+}
+
 input.check-in-btn {
     font-size: 1em;
     padding: 1em 2em;
@@ -117,6 +123,11 @@ input.check-in-btn {
     .review__item {
         max-width: 300px;
         height: 250px;
+    }
+    .review__item:hover {
+        -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+        transform: scale(1.05);
     }
     .review-send {
         width: 60%;

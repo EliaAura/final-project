@@ -1,4 +1,5 @@
 const form = document.getElementById('contacts-form');
+const error = document.getElementById('error');
 
 function getFormValue(e) {
     
@@ -25,12 +26,14 @@ function getFormValue(e) {
     fail = "Ваше сообщение слишком короткое";
     };
     if (fail!="") {
-    document.getElementById('error').innerHTML = fail;
-    return false;
+        error.classList.add('active');
+        error.innerHTML = fail;
+        return false;
     } else {
     alert("Спасибо за сообщение!");
     console.log(values);
     form.reset();
+    error.classList.remove('active');
     }
 }
 

@@ -67,6 +67,10 @@ form.contacts-info__block input, textarea {
 
 #error {
     height: 20px;
+    color: transparent;
+}
+#error.active {
+    color: #ff0000;
 }
 
 .contacts input.check-in-btn {

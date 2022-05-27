@@ -1,21 +1,5 @@
-
-// -------menu burger-------
-
-const menuBurger = document.querySelector('.burger-menu');
-if(menuBurger) {
-    const nav = document.querySelector('.nav');
-    menuBurger.addEventListener('click', function(e){
-        document.body.classList.toggle('_lock')
-        menuBurger.classList.toggle('_active');
-        nav.classList.toggle('_active');
-
-    });
-}
-
-// ---------pop up ----------------
-
 const openPopUp = document.getElementById('pop-up__btn');
-// const openPopUp2 = document.getElementById('pop-up__button');
+const openPopUp2 = document.getElementById('pop-up__button');
 const closePopUp = document.querySelector('.pop-up__close');
 const popUp = document.querySelector('.pop-up');
 const popUpError = document.getElementById('pop-up-error');
@@ -26,12 +10,12 @@ openPopUp.addEventListener('click', function(e) {
 
 });
 
-// openPopUp2.addEventListener('click', function(e) {
-//     e.preventDefault();
+openPopUp2.addEventListener('click', function(e) {
+    e.preventDefault();
 
-//     popUp.classList.add('active');
+    popUp.classList.add('active');
 
-// });
+});
 
 closePopUp.addEventListener('click', () => {
     popUp.classList.remove('active');
