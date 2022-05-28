@@ -13,29 +13,33 @@ if(menuBurger) {
 }
 
 // ---------pop up ----------------
-
-const openPopUp = document.getElementById('pop-up__btn');
-// const openPopUp2 = document.getElementById('pop-up__button');
+const body = document.querySelector('body');
+const openPopUpBtns = document.querySelectorAll('.pop-up-btn')
 const closePopUp = document.querySelector('.pop-up__close');
 const popUp = document.querySelector('.pop-up');
 const popUpError = document.getElementById('pop-up-error');
+const timeout = 500;
 
-openPopUp.addEventListener('click', function(e) {
-    e.preventDefault();
-    popUp.classList.add('active');
-
+if (openPopUpBtns.length > 0) {
+    for(let i=0; i<openPopUpBtns.length; i++) {
+    const popUpBtn = openPopUpBtns[i];
+    popUpBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        popUp.classList.add('active');
+    });
+}
+}
+popUp.addEventListener('click', function(e) {
+    if(!e.target.closest('.pop-up__body') && e.target.closest('.pop-up')) {
+        popUp.classList.remove('active');}
 });
 
-// openPopUp2.addEventListener('click', function(e) {
-//     e.preventDefault();
-
-//     popUp.classList.add('active');
-
-// });
-
-closePopUp.addEventListener('click', () => {
+closePopUp.addEventListener('click', (e) => {
     popUp.classList.remove('active');
 });
+
+
+//-------------pop up form--------------------
 
 const formPopUp = document.getElementById('pop-up-form');
 

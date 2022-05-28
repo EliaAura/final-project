@@ -57,8 +57,8 @@
     background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
   }
   .check-in-btn:hover {
-    text-shadow: 1px 1px 2px white;
-    box-shadow: 3px 3px 10px #bbe6f7;
+    text-shadow: 1px 1px 2px rgb(255, 255, 255);
+    box-shadow: 3px 3px 10px #08161b;
   }
   .check-in-btn:active{
     transform: scale(0.9);
